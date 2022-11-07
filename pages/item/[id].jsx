@@ -10,9 +10,9 @@ const ItemPage = () => {
                 </div>
             </div>
             <div className="bidding-window p-4 w-full md:w-2/6 h-full bg-slate-400 rounded-lg flex flex-col">
-                <div className="bids-placed py-4 grow mt-auto flex flex-col-reverse gap-2">
+                <div className="bids-placed py-4 grow mb-0 flex flex-col-reverse gap-2 overflow-auto">
                         {
-                            [1,2,3].map((bidId) => {
+                            [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].map((bidId) => {
                                 return (
                                     <div className="bid p-1.5 bg-white rounded-lg" key={bidId}>
                                         <h4 className="text-lg text-center font-bold">@username{bidId} bids Rs. 600</h4>
