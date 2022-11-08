@@ -1,6 +1,6 @@
 import React from "react";
 
-function LoginBtn({ text }) {
+function SolidButton({ text }) {
   return (
     <button className="border-2 rounded-lg py-2 px-5 font-bold text-[white] bg-[black]">
       {text}
@@ -8,4 +8,4 @@ function LoginBtn({ text }) {
   );
 }
 
-export default LoginBtn;
+export default SolidButton;
