@@ -9,7 +9,6 @@ function MyApp({ Component, pageProps }) {
       <div className="pt-16">
         <Component {...pageProps} />
       </div>
-
       <Footer />
     </div>
   );
