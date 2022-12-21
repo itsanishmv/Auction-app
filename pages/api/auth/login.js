@@ -4,13 +4,14 @@ import { generateJWT } from "../../../utility-functions/generateJWT";
 
 export default async function LoginHandler(req, res) {
   await connectDB();
-  const { name, email, password } = req.body;
-  const findRegisteredUser = await Users.find({ email, password });
+  console.log("login func running");
+  const { username, password } = req.body;
+  const findRegisteredUser = await Users.find({ username, password });
   if (findRegisteredUser.length > 0) {
     res.status(200).json({
       message: "logged in",
-      email,
-      token: await generateJWT(email),
+      username,
+      token: await generateJWT(username),
     });
   } else {
     res.json({ message: "please signup" });

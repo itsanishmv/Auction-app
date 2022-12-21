@@ -2,7 +2,7 @@ import { jwtVerify } from "jose";
 import { NextRequest, NextResponse } from "next/server";
 
 export default async function middleware(req) {
-  console.log(req.headers.get("authorization"));
+  console.log("middleware running");
   const authToken = req.headers?.get("authorization");
   const withoutBearer = authToken?.split(" ")[1];
   if (authToken && authToken.startsWith("Bearer")) {
@@ -24,3 +24,7 @@ export default async function middleware(req) {
     }
   }
 }
+
+// export const config = {
+//   matcher: "/api/login",
+// };
